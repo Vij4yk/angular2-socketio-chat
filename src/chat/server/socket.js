@@ -23,6 +23,11 @@ module.exports = function(server){
 
             client.to(channel).emit('message', args.data);
         });
+
+        client.on('disconnect', function(client){
+            console.log('Client disconnected..');
+        });
+
         client.emit('message', { hello: 'world' });
     });
 

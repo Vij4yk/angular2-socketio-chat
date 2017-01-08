@@ -15,6 +15,7 @@ import 'mdbootstrap/js/tether.min.js';
 import 'mdbootstrap/css/bootstrap.min.css';
 import 'mdbootstrap/css/mdb.min.css';
 import 'mdbootstrap/js/bootstrap.min.js';
+import 'mdbootstrap/js/mdb.min.js';
 
 
 

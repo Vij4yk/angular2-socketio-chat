@@ -1,0 +1,27 @@
+<div id="innerModal" class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="nicknameLabel" aria-hidden="true">
+  <div class="modal-dialog modal-sm" role="document">
+    <div class="modal-content">
+        <form [formGroup]="nicknameForm" (ngSubmit)="onSubmit(nicknameForm.value)">
+     <!--Header-->
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title" id="nicknameLabel">Nickname</h4>
+            </div>
+    <!--Body-->
+    <div class="modal-body">
+                <div class="md-form">
+                    <i class="fa fa-user prefix"></i>
+                    <input type="text" id="nicknameForm" class="form-control" [formControl]="nicknameForm.controls['nickname']">
+                    <label for="nicknameForm">Your nickname</label>
+                </div>
+    </div>
+    <!--Footer-->
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-primary" [disabled]="!nicknameForm.valid">Enter...</button>
+            </div>
+        </form>
+    </div>
+  </div>
+</div>

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { SocketService } from './shared/socket.service';
+import { ClientService } from './shared/client.service';
 
 @Component({
   selector: 'chat-app',
@@ -7,14 +7,14 @@ import { SocketService } from './shared/socket.service';
 })
 export class AppComponent { 
 
-  constructor(private socket: SocketService) {
-    
+
+  constructor(private client: ClientService) {
   }
 
   onInit(){
-      this.socket.join('test-channel')
+/*      this.socket.join('test-channel')
           .subscribe(function(data: any){
                   console.log(data);
-              });
+              });*/
   }
 }
